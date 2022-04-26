@@ -1,10 +1,10 @@
-#!/bin/bash -e
-################################################################################
-##  File:  heroku.sh
-##  Desc:  Installs Heroku CLI
-################################################################################
+# #!/bin/bash -e
+# ################################################################################
+# ##  File:  heroku.sh
+# ##  Desc:  Installs Heroku CLI
+# ################################################################################
 
-# Install Heroku CLI
-curl https://cli-assets.heroku.com/install.sh | sh
+# # Install Heroku CLI
+# curl https://cli-assets.heroku.com/install.sh | sh
 
-invoke_tests "Tools" "Heroku"
+# invoke_tests "Tools" "Heroku"
