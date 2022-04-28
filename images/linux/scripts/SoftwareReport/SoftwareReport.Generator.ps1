@@ -9,7 +9,7 @@ Set-StrictMode -Version Latest
 
 Import-Module MarkdownPS
 Import-Module (Join-Path $PSScriptRoot "SoftwareReport.Android.psm1") -DisableNameChecking
-Import-Module (Join-Path $PSScriptRoot "SoftwareReport.Browsers.psm1") -DisableNameChecking
+# Import-Module (Join-Path $PSScriptRoot "SoftwareReport.Browsers.psm1") -DisableNameChecking
 Import-Module (Join-Path $PSScriptRoot "SoftwareReport.CachedTools.psm1") -DisableNameChecking
 Import-Module (Join-Path $PSScriptRoot "SoftwareReport.Common.psm1") -DisableNameChecking
 Import-Module (Join-Path $PSScriptRoot "SoftwareReport.Databases.psm1") -DisableNameChecking
@@ -40,7 +40,7 @@ $markdown += New-MDHeader "Language and Runtime" -Level 3
 $runtimesList = @(
     (Get-BashVersion),
     (Get-CPPVersions),
-    (Get-FortranVersions),
+    # (Get-FortranVersions),
     (Get-ErlangVersion),
     (Get-ErlangRebar3Version),
     (Get-MonoVersion),
@@ -50,9 +50,9 @@ $runtimesList = @(
     (Get-PythonVersion),
     (Get-Python3Version),
     (Get-RubyVersion),
-    (Get-SwiftVersion),
-    (Get-JuliaVersion),
-    (Get-KotlinVersion),
+    # (Get-SwiftVersion),
+    # (Get-JuliaVersion),
+    # (Get-KotlinVersion),
     (Get-ClangVersions),
     (Get-ClangFormatVersions)
 )
@@ -101,10 +101,10 @@ $toolsList = @(
     (Get-AptFastVersion),
     (Get-AzCopyVersion),
     (Get-BazelVersion),
-    (Get-BazeliskVersion),
+    # (Get-BazeliskVersion),
     (Get-BicepVersion),
     (Get-BuildahVersion),
-    (Get-CodeQLBundleVersion),
+    # (Get-CodeQLBundleVersion),
     (Get-CMakeVersion),
     (Get-DockerMobyClientVersion),
     (Get-DockerMobyServerVersion),
@@ -115,15 +115,15 @@ $toolsList = @(
     (Get-GitLFSVersion),
     (Get-GitFTPVersion),
     (Get-HavegedVersion),
-    (Get-HerokuVersion),
-    (Get-HHVMVersion),
+    # (Get-HerokuVersion),
+    # (Get-HHVMVersion),
     (Get-SVNVersion),
     (Get-JqVersion),
     (Get-YqVersion),
     (Get-KindVersion),
     (Get-KubectlVersion),
     (Get-KustomizeVersion),
-    (Get-LeiningenVersion),
+    # (Get-LeiningenVersion),
     (Get-MediainfoVersion),
     (Get-HGVersion),
     (Get-MinikubeVersion),
@@ -135,7 +135,7 @@ $toolsList = @(
     (Get-ParcelVersion),
     (Get-PhantomJSVersion),
     (Get-PodManVersion),
-    (Get-PulumiVersion),
+    # (Get-PulumiVersion),
     (Get-RVersion),
     (Get-SkopeoVersion),
     (Get-SphinxVersion),
@@ -152,14 +152,14 @@ $markdown += New-MDList -Style Unordered -Lines ($toolsList | Sort-Object)
 
 $markdown += New-MDHeader "CLI Tools" -Level 3
 $markdown += New-MDList -Style Unordered -Lines (@(
-    (Get-AlibabaCloudCliVersion),
-    (Get-AWSCliVersion),
-    (Get-AWSCliSessionManagerPluginVersion),
-    (Get-AWSSAMVersion),
+    # (Get-AlibabaCloudCliVersion),
+    # (Get-AWSCliVersion),
+    # (Get-AWSCliSessionManagerPluginVersion),
+    # (Get-AWSSAMVersion),
     (Get-AzureCliVersion),
     (Get-AzureDevopsVersion),
     (Get-GitHubCliVersion),
-    (Get-GoogleCloudSDKVersion),
+    # (Get-GoogleCloudSDKVersion),
     (Get-HubCliVersion),
     (Get-NetlifyCliVersion),
     (Get-OCCliVersion),
@@ -172,22 +172,22 @@ $markdown += New-MDHeader "Java" -Level 3
 $markdown += Get-JavaVersions | New-MDTable
 $markdown += New-MDNewLine
 
-if (Test-IsUbuntu20) {
-    $markdown += New-MDHeader "GraalVM" -Level 3
-    $markdown += Build-GraalVMTable | New-MDTable
-    $markdown += New-MDNewLine
-}
+# if (Test-IsUbuntu20) {
+#     $markdown += New-MDHeader "GraalVM" -Level 3
+#     $markdown += Build-GraalVMTable | New-MDTable
+#     $markdown += New-MDNewLine
+# }
 
 $markdown += Build-PHPSection
 
-$markdown += New-MDHeader "Haskell" -Level 3
-$markdown += New-MDList -Style Unordered -Lines (@(
-    (Get-GHCVersion),
-    (Get-GHCupVersion),
-    (Get-CabalVersion),
-    (Get-StackVersion)
-    ) | Sort-Object
-)
+# $markdown += New-MDHeader "Haskell" -Level 3
+# $markdown += New-MDList -Style Unordered -Lines (@(
+#     (Get-GHCVersion),
+#     (Get-GHCupVersion),
+#     (Get-CabalVersion),
+#     (Get-StackVersion)
+#     ) | Sort-Object
+# )
 
 $markdown += New-MDHeader "Rust Tools" -Level 3
 $markdown += New-MDList -Style Unordered -Lines (@(
@@ -209,16 +209,16 @@ $markdown += New-MDList -Style Unordered -Lines (@(
     ) | Sort-Object
 )
 
-$markdown += New-MDHeader "Browsers and Drivers" -Level 3
+# $markdown += New-MDHeader "Browsers and Drivers" -Level 3
 
-$browsersAndDriversList = @(
-    (Get-ChromeVersion),
-    (Get-ChromeDriverVersion),
-    (Get-FirefoxVersion),
-    (Get-GeckodriverVersion),
-    (Get-ChromiumVersion),
-    (Get-SeleniumVersion)
-)
+# $browsersAndDriversList = @(
+#     (Get-ChromeVersion),
+#     (Get-ChromeDriverVersion),
+#     (Get-FirefoxVersion),
+#     (Get-GeckodriverVersion),
+#     (Get-ChromiumVersion),
+#     (Get-SeleniumVersion)
+# )
 
 $markdown += New-MDList -Style Unordered -Lines $browsersAndDriversList
 $markdown += New-MDHeader "Environment variables" -Level 4
@@ -236,12 +236,12 @@ $markdown += New-MDList -Lines $tools -Style Unordered
 
 $markdown += New-MDHeader "Databases" -Level 3
 $markdown += New-MDList -Style Unordered -Lines (@(
-    (Get-MongoDbVersion),
+    # (Get-MongoDbVersion),
     (Get-SqliteVersion)
     ) | Sort-Object
 )
 
-$markdown += Build-PostgreSqlSection
+# $markdown += Build-PostgreSqlSection
 $markdown += Build-MySQLSection
 $markdown += Build-MSSQLToolsSection
 

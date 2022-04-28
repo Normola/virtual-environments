@@ -5,7 +5,7 @@ Set-StrictMode -Version Latest
 
 Import-Module MarkdownPS
 Import-Module (Join-Path $PSScriptRoot "SoftwareReport.Android.psm1") -DisableNameChecking
-Import-Module (Join-Path $PSScriptRoot "SoftwareReport.Browsers.psm1") -DisableNameChecking
+# Import-Module (Join-Path $PSScriptRoot "SoftwareReport.Browsers.psm1") -DisableNameChecking
 Import-Module (Join-Path $PSScriptRoot "SoftwareReport.CachedTools.psm1") -DisableNameChecking
 Import-Module (Join-Path $PSScriptRoot "SoftwareReport.Common.psm1") -DisableNameChecking
 Import-Module (Join-Path $PSScriptRoot "SoftwareReport.Databases.psm1") -DisableNameChecking
@@ -91,7 +91,7 @@ $toolsList = @(
     (Get-BicepVersion),
     (Get-CabalVersion),
     (Get-CMakeVersion),
-    (Get-CodeQLBundleVersion),
+    # (Get-CodeQLBundleVersion),
     (Get-DockerVersion),
     (Get-DockerComposeVersion),
     (Get-DockerWincredVersion),

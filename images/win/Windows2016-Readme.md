@@ -54,7 +54,6 @@
 - Bicep 0.4.1272
 - Cabal 3.6.2.0
 - CMake 3.22.3
-- CodeQL Action Bundle 2.8.1
 - Docker 20.10.7
 - Docker-compose 1.29.2
 - Docker-wincred 0.6.4
