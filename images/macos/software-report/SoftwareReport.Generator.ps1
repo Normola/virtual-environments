@@ -73,11 +73,11 @@ $packageManagementList = @(
     (Get-VcpkgVersion)
 )
 
-if ($os.IsLessThanMonterey) {
-    $packageManagementList += @(
-        (Get-CondaVersion)
-    )
-}
+# if ($os.IsLessThanMonterey) {
+#     $packageManagementList += @(
+#         (Get-CondaVersion)
+#     )
+# }
 
 $markdown += New-MDList -Style Unordered -Lines ($packageManagementList | Sort-Object)
 if ($os.IsLessThanMonterey) {

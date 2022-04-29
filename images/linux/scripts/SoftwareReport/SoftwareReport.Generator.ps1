@@ -65,7 +65,7 @@ $packageManagementList = @(
     (Get-HomebrewVersion),
     (Get-CpanVersion),
     (Get-GemVersion),
-    (Get-MinicondaVersion),
+    # (Get-MinicondaVersion),
     (Get-HelmVersion),
     (Get-NpmVersion),
     (Get-YarnVersion),

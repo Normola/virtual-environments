@@ -52,7 +52,7 @@ $markdown += New-MDList -Style Unordered -Lines ($languageTools | Sort-Object)
 
 $packageManagementList = @(
     (Get-ChocoVersion),
-    (Get-CondaVersion),
+    # (Get-CondaVersion),
     (Get-ComposerVersion),
     (Get-HelmVersion),
     (Get-NPMVersion),

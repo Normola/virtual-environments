@@ -58,13 +58,13 @@ Describe "AzCopy" {
     }
 }
 
-Describe "Miniconda" -Skip:($os.IsMonterey) {
-    It "Conda" {
-        Get-EnvironmentVariable "CONDA" | Should -Not -BeNullOrEmpty
-        $condaBinPath = Join-Path $env:CONDA "bin" "conda"
-        "$condaBinPath --version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "Miniconda" -Skip:($os.IsMonterey) {
+#     It "Conda" {
+#         Get-EnvironmentVariable "CONDA" | Should -Not -BeNullOrEmpty
+#         $condaBinPath = Join-Path $env:CONDA "bin" "conda"
+#         "$condaBinPath --version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "Stack" {
     It "Stack" {

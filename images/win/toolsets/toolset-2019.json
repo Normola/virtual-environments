@@ -282,7 +282,6 @@
             "Component.UnityEngine.x64",
             "Component.Unreal.Android",
             "Microsoft.Component.Azure.DataLake.Tools",
-            "Microsoft.Component.PythonTools.Miniconda",
             "Microsoft.Component.PythonTools.Web",
             "Microsoft.Component.VC.Runtime.UCRTSDK",
             "Microsoft.Net.ComponentGroup.4.6.2.DeveloperTools",

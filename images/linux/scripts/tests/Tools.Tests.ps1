@@ -298,11 +298,11 @@ Describe "Leiningen" {
     }
 }
 
-Describe "Conda" {
-    It "conda" {
-        "conda --version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "Conda" {
+#     It "conda" {
+#         "conda --version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "Packer" {
     It "packer" {
