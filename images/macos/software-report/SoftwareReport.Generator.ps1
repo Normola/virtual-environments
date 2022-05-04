@@ -91,7 +91,7 @@ $markdown += New-MDList -Style Unordered -Lines (@(
     (Get-MavenVersion),
     (Get-GradleVersion),
     (Get-ApacheAntVersion),
-    (Get-SbtVersion)
+    # (Get-SbtVersion)
     ) | Sort-Object
 )
 

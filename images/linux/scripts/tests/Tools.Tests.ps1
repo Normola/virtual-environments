@@ -8,11 +8,11 @@ Describe "azcopy" {
     }
 }
 
-Describe "Bicep" {
-    It "Bicep" {
-        "bicep --version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "Bicep" {
+#     It "Bicep" {
+#         "bicep --version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "Rust" {
     BeforeAll {
@@ -98,14 +98,14 @@ Describe "Ansible" {
     }
 }
 
-Describe "Bazel" {
-    It "<ToolName>" -TestCases @(
-        @{ ToolName = "bazel" }
-        @{ ToolName = "bazelisk" }
-    ) {
-        "$ToolName --version"| Should -ReturnZeroExitCode
-    }
-}
+# Describe "Bazel" {
+#     It "<ToolName>" -TestCases @(
+#         @{ ToolName = "bazel" }
+#         @{ ToolName = "bazelisk" }
+#     ) {
+#         "$ToolName --version"| Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "clang" {
     [array]$testCases = (Get-ToolsetContent).clang.Versions | ForEach-Object { @{ClangVersion = $_} }
@@ -126,17 +126,17 @@ Describe "Cmake" {
     }
 }
 
-Describe "erlang" {
-    $testCases = @("erl -version", "erlc -v", "rebar3 -v") | ForEach-Object { @{ErlangCommand = $_} }
+# Describe "erlang" {
+#     $testCases = @("erl -version", "erlc -v", "rebar3 -v") | ForEach-Object { @{ErlangCommand = $_} }
 
-    It "erlang <ErlangCommand>" -TestCases $testCases {
-        param (
-            [string] $ErlangCommand
-        )
+#     It "erlang <ErlangCommand>" -TestCases $testCases {
+#         param (
+#             [string] $ErlangCommand
+#         )
 
-        "$ErlangCommand" | Should -ReturnZeroExitCode
-    }
-}
+#         "$ErlangCommand" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "gcc" {
     [array]$testCases = (Get-ToolsetContent).gcc.Versions | ForEach-Object { @{GccVersion = $_} }
@@ -150,17 +150,17 @@ Describe "gcc" {
     }
 }
 
-Describe "gfortran" {
-    [array]$testCases = (Get-ToolsetContent).gfortran.Versions | ForEach-Object { @{GfortranVersion = $_} }
+# Describe "gfortran" {
+#     [array]$testCases = (Get-ToolsetContent).gfortran.Versions | ForEach-Object { @{GfortranVersion = $_} }
 
-    It "gfortran <GfortranVersion>" -TestCases $testCases {
-        param (
-            [string] $GfortranVersion
-        )
+#     It "gfortran <GfortranVersion>" -TestCases $testCases {
+#         param (
+#             [string] $GfortranVersion
+#         )
 
-        "$GfortranVersion --version" | Should -ReturnZeroExitCode
-    }
-}
+#         "$GfortranVersion --version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "Mono" {
     It "mono" {
@@ -194,11 +194,11 @@ Describe "R" {
     }
 }
 
-Describe "Sbt" {
-    It "sbt" {
-        "sbt --version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "Sbt" {
+#     It "sbt" {
+#         "sbt --version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "Selenium" {
     It "Selenium is installed" {
@@ -244,11 +244,11 @@ Describe "Heroku" {
     }
 }
 
-Describe "HHVM" {
-    It "hhvm" {
-        "hhvm --version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "HHVM" {
+#     It "hhvm" {
+#         "hhvm --version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "Homebrew" {
     It "homebrew" {
@@ -264,11 +264,11 @@ Describe "Homebrew" {
     }
 }
 
-Describe "Julia" {
-    It "julia" {
-        "julia --version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "Julia" {
+#     It "julia" {
+#         "julia --version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "Kubernetes tools" {
     It "kind" {
@@ -292,11 +292,11 @@ Describe "Kubernetes tools" {
     }
 }
 
-Describe "Leiningen" {
-    It "leiningen" {
-        "lein --version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "Leiningen" {
+#     It "leiningen" {
+#         "lein --version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 # Describe "Conda" {
 #     It "conda" {
@@ -310,11 +310,11 @@ Describe "Packer" {
     }
 }
 
-Describe "Pulumi" {
-    It "pulumi" {
-        "pulumi version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "Pulumi" {
+#     It "pulumi" {
+#         "pulumi version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "Phantomjs" {
     It "phantomjs" {
@@ -322,15 +322,15 @@ Describe "Phantomjs" {
     }
 }
 
-Describe "GraalVM" -Skip:(-not (Test-IsUbuntu20)) {
-    It "graalvm" {
-        '$GRAALVM_11_ROOT/bin/java -version' | Should -ReturnZeroExitCode
-    }
+# Describe "GraalVM" -Skip:(-not (Test-IsUbuntu20)) {
+#     It "graalvm" {
+#         '$GRAALVM_11_ROOT/bin/java -version' | Should -ReturnZeroExitCode
+#     }
 
-    It "native-image" {
-        '$GRAALVM_11_ROOT/bin/native-image --version' | Should -ReturnZeroExitCode
-    }
-}
+#     It "native-image" {
+#         '$GRAALVM_11_ROOT/bin/native-image --version' | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "Containers" {
     $testCases = @("podman", "buildah", "skopeo") | ForEach-Object { @{ContainerCommand = $_} }
@@ -391,28 +391,28 @@ Describe "yq" {
     }
 }
 
-Describe "Kotlin" {
-    It "kapt" {
-        "kapt -version"| Should -ReturnZeroExitCode
-    }
+# Describe "Kotlin" {
+#     It "kapt" {
+#         "kapt -version"| Should -ReturnZeroExitCode
+#     }
 
-    It "kotlin" {
-        "kotlin -version"| Should -ReturnZeroExitCode
-    }
+#     It "kotlin" {
+#         "kotlin -version"| Should -ReturnZeroExitCode
+#     }
 
-    It "kotlinc" {
-        "kotlinc -version"| Should -ReturnZeroExitCode
-    }
+#     It "kotlinc" {
+#         "kotlinc -version"| Should -ReturnZeroExitCode
+#     }
 
-    It "kotlinc-js" {
-        "kotlinc-js -version"| Should -ReturnZeroExitCode
-    }
+#     It "kotlinc-js" {
+#         "kotlinc-js -version"| Should -ReturnZeroExitCode
+#     }
 
-    It "kotlinc-jvm" {
-        "kotlinc-jvm -version"| Should -ReturnZeroExitCode
-    }
+#     It "kotlinc-jvm" {
+#         "kotlinc-jvm -version"| Should -ReturnZeroExitCode
+#     }
 
-    It "kotlin-dce-js" {
-        "kotlin-dce-js -version"| Should -ReturnZeroExitCode
-    }
-}
+#     It "kotlin-dce-js" {
+#         "kotlin-dce-js -version"| Should -ReturnZeroExitCode
+#     }
+# }

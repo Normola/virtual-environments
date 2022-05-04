@@ -85,7 +85,7 @@ $projectManagementList = @(
     (Get-AntVersion),
     (Get-GradleVersion),
     (Get-MavenVersion),
-    (Get-SbtVersion)
+    # (Get-SbtVersion)
 )
 
 if (Test-IsUbuntu20) {

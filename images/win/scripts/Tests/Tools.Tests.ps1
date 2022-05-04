@@ -14,23 +14,23 @@ Describe "Azure Cosmos DB Emulator" {
     }
 }
 
-Describe "Bazel" {
-    It "<ToolName>" -TestCases @(
-        @{ ToolName = "bazel" }
-        @{ ToolName = "bazelisk" }
-    ) {
-        "$ToolName --version"| Should -ReturnZeroExitCode
-    }
-}
+# Describe "Bazel" {
+#     It "<ToolName>" -TestCases @(
+#         @{ ToolName = "bazel" }
+#         @{ ToolName = "bazelisk" }
+#     ) {
+#         "$ToolName --version"| Should -ReturnZeroExitCode
+#     }
+# }
 
-Describe "CodeQLBundle" {
-    It "CodeQLBundle" {
-        $CodeQLVersionsWildcard = Join-Path $Env:AGENT_TOOLSDIRECTORY -ChildPath "codeql" | Join-Path -ChildPath "*"
-        $CodeQLVersionPath = Get-ChildItem $CodeQLVersionsWildcard | Select-Object -First 1 -Expand FullName
-        $CodeQLPath = Join-Path $CodeQLVersionPath -ChildPath "x64" | Join-Path -ChildPath "codeql" | Join-Path -ChildPath "codeql.exe"
-        "$CodeQLPath version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "CodeQLBundle" {
+#     It "CodeQLBundle" {
+#         $CodeQLVersionsWildcard = Join-Path $Env:AGENT_TOOLSDIRECTORY -ChildPath "codeql" | Join-Path -ChildPath "*"
+#         $CodeQLVersionPath = Get-ChildItem $CodeQLVersionsWildcard | Select-Object -First 1 -Expand FullName
+#         $CodeQLPath = Join-Path $CodeQLVersionPath -ChildPath "x64" | Join-Path -ChildPath "codeql" | Join-Path -ChildPath "codeql.exe"
+#         "$CodeQLPath version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "R" {
     It "Rscript" {
@@ -91,15 +91,15 @@ Describe "Mingw64" {
     }
 }
 
-Describe "GoogleCloudSDK" -Skip:(Test-IsWin22) {
-    It "<ToolName>" -TestCases @(
-        @{ ToolName = "bq" }
-        @{ ToolName = "gcloud" }
-        @{ ToolName = "gsutil" }
-    ) {
-        "$ToolName version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "GoogleCloudSDK" -Skip:(Test-IsWin22) {
+#     It "<ToolName>" -TestCases @(
+#         @{ ToolName = "bq" }
+#         @{ ToolName = "gcloud" }
+#         @{ ToolName = "gsutil" }
+#     ) {
+#         "$ToolName version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "NET48" {
     It "NET48" {
@@ -124,11 +124,11 @@ Describe "PowerShell Core" {
     }
 }
 
-Describe "Sbt" {
-    It "sbt" {
-        "sbt --version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "Sbt" {
+#     It "sbt" {
+#         "sbt --version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "ServiceFabricSDK" {
     It "PowerShell Module" {
@@ -194,13 +194,13 @@ Describe "Pipx" {
     }
 }
 
-Describe "Kotlin" {
-    $kotlinPackages =  @("kapt", "kotlin", "kotlinc", "kotlin-dce-js", "kotlinc-js", "kotlinc-jvm")
+# Describe "Kotlin" {
+#     $kotlinPackages =  @("kapt", "kotlin", "kotlinc", "kotlin-dce-js", "kotlinc-js", "kotlinc-jvm")
 
-    It "<toolName> is available" -TestCases ($kotlinPackages | ForEach-Object { @{ toolName = $_ } })  {
-        "$toolName -version" | Should -ReturnZeroExitCode
-    }
-}
+#     It "<toolName> is available" -TestCases ($kotlinPackages | ForEach-Object { @{ toolName = $_ } })  {
+#         "$toolName -version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "SQL OLEDB Driver" -Skip:(Test-IsWin16) {
     It "SQL OLEDB Driver" {

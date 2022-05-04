@@ -12,11 +12,11 @@ Describe "Azure DevOps CLI" {
     }
 }
 
-Describe "Carthage" {
-    It "Carthage" {
-        "carthage version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "Carthage" {
+#     It "Carthage" {
+#         "carthage version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "cmake" {
     It "cmake" {
@@ -30,11 +30,11 @@ Describe "Subversion" {
     }
 }
 
-Describe "SwiftFormat" -Skip:($os.IsMonterey) {
-    It "SwiftFormat" {
-        "swiftformat --version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "SwiftFormat" -Skip:($os.IsMonterey) {
+#     It "SwiftFormat" {
+#         "swiftformat --version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "GnuPG" {
     It "GnuPG" {
@@ -66,11 +66,11 @@ Describe "Helm" -Skip:($os.IsMonterey) {
     }
 }
 
-Describe "bazelisk" {
-    It "bazelisk" {
-        "bazelisk version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "bazelisk" {
+#     It "bazelisk" {
+#         "bazelisk version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "Github CLI" {
     It "GitHub CLI" {
@@ -90,11 +90,11 @@ Describe "Apache Ant" {
     }
 }
 
-Describe "Aria2" {
-    It "Aria2" {
-        "aria2c --version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "Aria2" {
+#     It "Aria2" {
+#         "aria2c --version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "GNU Tar" {
     It "GNU Tar" {
@@ -102,23 +102,23 @@ Describe "GNU Tar" {
     }
 }
 
-Describe "bazel" {
-    It "bazel" {
-        "bazel --version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "bazel" {
+#     It "bazel" {
+#         "bazel --version" | Should -ReturnZeroExitCode
+#     }
+# }
 
-Describe "Aliyun CLI" -Skip:($os.IsMonterey) {
-    It "Aliyun CLI" {
-        "aliyun --version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "Aliyun CLI" -Skip:($os.IsMonterey) {
+#     It "Aliyun CLI" {
+#         "aliyun --version" | Should -ReturnZeroExitCode
+#     }
+# }
 
-Describe "Julia" {
-    It "Julia" {
-        "julia --version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "Julia" {
+#     It "Julia" {
+#         "julia --version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "jq" {
     It "jq" {
@@ -176,11 +176,11 @@ Describe "Kotlin" {
     }
 }
 
-Describe "sbt" {
-    It "sbt" {
-        "sbt -version" | Should -ReturnZeroExitCode
-    }
-}
+# Describe "sbt" {
+#     It "sbt" {
+#         "sbt -version" | Should -ReturnZeroExitCode
+#     }
+# }
 
 Describe "yq" {
     It "yq" {
