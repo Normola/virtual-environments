@@ -75,7 +75,7 @@ $markdown += New-MDHeader "Project Management" -Level 3
 $projectManagementTools = @(
     (Get-AntVersion),
     (Get-GradleVersion),
-    (Get-MavenVersion),
+    (Get-MavenVersion)
     (Get-SbtVersion)
 )
 
