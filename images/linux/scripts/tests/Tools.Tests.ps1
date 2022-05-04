@@ -14,56 +14,56 @@ Describe "azcopy" {
 #     }
 # }
 
-Describe "Rust" {
-    BeforeAll {
-        $env:PATH = "/etc/skel/.cargo/bin:/etc/skel/.rustup/bin:$($env:PATH)"
-        $env:RUSTUP_HOME = "/etc/skel/.rustup"
-        $env:CARGO_HOME = "/etc/skel/.cargo"
-    }
+# Describe "Rust" {
+#     BeforeAll {
+#         $env:PATH = "/etc/skel/.cargo/bin:/etc/skel/.rustup/bin:$($env:PATH)"
+#         $env:RUSTUP_HOME = "/etc/skel/.rustup"
+#         $env:CARGO_HOME = "/etc/skel/.cargo"
+#     }
     
    
-    It "Rustup is installed" {
-        "rustup --version" | Should -ReturnZeroExitCode
-    }
+#     It "Rustup is installed" {
+#         "rustup --version" | Should -ReturnZeroExitCode
+#     }
 
-    It "Rustc is installed" {
-        "rustc --version" | Should -ReturnZeroExitCode
-    }
+#     It "Rustc is installed" {
+#         "rustc --version" | Should -ReturnZeroExitCode
+#     }
 
-    It "Rustdoc is installed" {
-        "rustdoc --version" | Should -ReturnZeroExitCode
-    }
+#     It "Rustdoc is installed" {
+#         "rustdoc --version" | Should -ReturnZeroExitCode
+#     }
 
-    It "Rustfmt is installed" {
-        "rustfmt --version" | Should -ReturnZeroExitCode
-    }
+#     It "Rustfmt is installed" {
+#         "rustfmt --version" | Should -ReturnZeroExitCode
+#     }
 
-    Context "Cargo dependencies" {
-        It "bindgen" {
-            "bindgen --version" | Should -ReturnZeroExitCode
-        }
+#     Context "Cargo dependencies" {
+#         It "bindgen" {
+#             "bindgen --version" | Should -ReturnZeroExitCode
+#         }
 
-        It "cbindgen" {
-            "cbindgen --version" | Should -ReturnZeroExitCode
-        }
+#         It "cbindgen" {
+#             "cbindgen --version" | Should -ReturnZeroExitCode
+#         }
 
-        It "cargo" {
-            "cargo --version" | Should -ReturnZeroExitCode
-        }
+#         It "cargo" {
+#             "cargo --version" | Should -ReturnZeroExitCode
+#         }
 
-        It "cargo-clippy" {
-            "cargo-clippy --version" | Should -ReturnZeroExitCode
-        }
+#         It "cargo-clippy" {
+#             "cargo-clippy --version" | Should -ReturnZeroExitCode
+#         }
 
-        It "Cargo audit" {
-            "cargo audit --version" | Should -ReturnZeroExitCode
-        }
+#         It "Cargo audit" {
+#             "cargo audit --version" | Should -ReturnZeroExitCode
+#         }
 
-        It "Cargo outdated" {
-            "cargo outdated --version" | Should -ReturnZeroExitCode
-        }
-    }
-}
+#         It "Cargo outdated" {
+#             "cargo outdated --version" | Should -ReturnZeroExitCode
+#         }
+#     }
+# }
 Describe "Docker" {
     It "docker" {
         "docker --version" | Should -ReturnZeroExitCode

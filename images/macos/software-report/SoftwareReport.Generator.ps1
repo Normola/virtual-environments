@@ -213,25 +213,25 @@ $markdown += New-MDNewLine
 $markdown += Build-ToolcacheSection
 $markdown += New-MDNewLine
 
-$markdown += New-MDHeader "Rust Tools" -Level 3
-$markdown += New-MDList -Style Unordered -Lines (@(
-    (Get-RustVersion),
-    (Get-RustupVersion),
-    (Get-RustdocVersion),
-    (Get-RustCargoVersion)
-    ) | Sort-Object
-)
+# $markdown += New-MDHeader "Rust Tools" -Level 3
+# $markdown += New-MDList -Style Unordered -Lines (@(
+#     (Get-RustVersion),
+#     (Get-RustupVersion),
+#     (Get-RustdocVersion),
+#     (Get-RustCargoVersion)
+#     ) | Sort-Object
+# )
 
-$markdown += New-MDHeader "Packages" -Level 4
-$markdown += New-MDList -Style Unordered -Lines (@(
-    (Get-Bindgen),
-    (Get-Cbindgen),
-    (Get-Cargooutdated),
-    (Get-Cargoaudit),
-    (Get-RustfmtVersion),
-    (Get-RustClippyVersion)
-    ) | Sort-Object
-)
+# $markdown += New-MDHeader "Packages" -Level 4
+# $markdown += New-MDList -Style Unordered -Lines (@(
+#     (Get-Bindgen),
+#     (Get-Cbindgen),
+#     (Get-Cargooutdated),
+#     (Get-Cargoaudit),
+#     (Get-RustfmtVersion),
+#     (Get-RustClippyVersion)
+#     ) | Sort-Object
+# )
 
 $markdown += New-MDHeader "PowerShell Tools" -Level 3
 $markdown += New-MDList -Lines (Get-PowershellVersion) -Style Unordered

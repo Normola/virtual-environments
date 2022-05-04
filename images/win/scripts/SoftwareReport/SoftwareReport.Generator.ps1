@@ -146,37 +146,37 @@ if ((Test-IsWin16) -or (Test-IsWin19)) {
 }
 $markdown += New-MDList -Style Unordered -Lines ($cliTools | Sort-Object)
 
-$markdown += New-MDHeader "Rust Tools" -Level 3
-$markdown += New-MDList -Style Unordered -Lines (@(
-    "Rust $(Get-RustVersion)",
-    "Rustup $(Get-RustupVersion)",
-    "Cargo $(Get-RustCargoVersion)",
-    "Rustdoc $(Get-RustdocVersion)"
-    ) | Sort-Object
-)
+# $markdown += New-MDHeader "Rust Tools" -Level 3
+# $markdown += New-MDList -Style Unordered -Lines (@(
+#     "Rust $(Get-RustVersion)",
+#     "Rustup $(Get-RustupVersion)",
+#     "Cargo $(Get-RustCargoVersion)",
+#     "Rustdoc $(Get-RustdocVersion)"
+#     ) | Sort-Object
+# )
 
-$markdown += New-MDHeader "Packages" -Level 4
-$markdown += New-MDList -Style Unordered -Lines (@(
-    (Get-BindgenVersion),
-    (Get-CargoAuditVersion),
-    (Get-CargoOutdatedVersion),
-    (Get-CbindgenVersion),
-    "Rustfmt $(Get-RustfmtVersion)",
-    "Clippy $(Get-RustClippyVersion)"
-    ) | Sort-Object
-)
+# $markdown += New-MDHeader "Packages" -Level 4
+# $markdown += New-MDList -Style Unordered -Lines (@(
+#     (Get-BindgenVersion),
+#     (Get-CargoAuditVersion),
+#     (Get-CargoOutdatedVersion),
+#     (Get-CbindgenVersion),
+#     "Rustfmt $(Get-RustfmtVersion)",
+#     "Clippy $(Get-RustClippyVersion)"
+#     ) | Sort-Object
+# )
 
-$markdown += New-MDHeader "Browsers and webdrivers" -Level 3
-$markdown += New-MDList -Style Unordered -Lines @(
-    (Get-BrowserVersion -Browser "chrome"),
-    (Get-SeleniumWebDriverVersion -Driver "chrome"),
-    (Get-BrowserVersion -Browser "edge"),
-    (Get-SeleniumWebDriverVersion -Driver "edge"),
-    (Get-BrowserVersion -Browser "firefox"),
-    (Get-SeleniumWebDriverVersion -Driver "firefox"),
-    (Get-SeleniumWebDriverVersion -Driver "iexplorer"),
-    (Get-SeleniumVersion)
-)
+# $markdown += New-MDHeader "Browsers and webdrivers" -Level 3
+# $markdown += New-MDList -Style Unordered -Lines @(
+#     (Get-BrowserVersion -Browser "chrome"),
+#     (Get-SeleniumWebDriverVersion -Driver "chrome"),
+#     (Get-BrowserVersion -Browser "edge"),
+#     (Get-SeleniumWebDriverVersion -Driver "edge"),
+#     (Get-BrowserVersion -Browser "firefox"),
+#     (Get-SeleniumWebDriverVersion -Driver "firefox"),
+#     (Get-SeleniumWebDriverVersion -Driver "iexplorer"),
+#     (Get-SeleniumVersion)
+# )
 
 $markdown += New-MDHeader "Environment variables" -Level 4
 $markdown += Build-BrowserWebdriversEnvironmentTable | New-MDTable

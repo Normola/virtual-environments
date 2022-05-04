@@ -189,25 +189,25 @@ $markdown += Build-PHPSection
 #     ) | Sort-Object
 # )
 
-$markdown += New-MDHeader "Rust Tools" -Level 3
-$markdown += New-MDList -Style Unordered -Lines (@(
-    (Get-RustVersion),
-    (Get-RustupVersion),
-    (Get-RustdocVersion),
-    (Get-CargoVersion)
-    ) | Sort-Object
-)
+# $markdown += New-MDHeader "Rust Tools" -Level 3
+# $markdown += New-MDList -Style Unordered -Lines (@(
+#     (Get-RustVersion),
+#     (Get-RustupVersion),
+#     (Get-RustdocVersion),
+#     (Get-CargoVersion)
+#     ) | Sort-Object
+# )
 
-$markdown += New-MDHeader "Packages" -Level 4
-$markdown += New-MDList -Style Unordered -Lines (@(
-    (Get-BindgenVersion),
-    (Get-CargoAuditVersion),
-    (Get-CargoOutdatedVersion),
-    (Get-CargoClippyVersion),
-    (Get-CbindgenVersion),
-    (Get-RustfmtVersion)
-    ) | Sort-Object
-)
+# $markdown += New-MDHeader "Packages" -Level 4
+# $markdown += New-MDList -Style Unordered -Lines (@(
+#     (Get-BindgenVersion),
+#     (Get-CargoAuditVersion),
+#     (Get-CargoOutdatedVersion),
+#     (Get-CargoClippyVersion),
+#     (Get-CbindgenVersion),
+#     (Get-RustfmtVersion)
+#     ) | Sort-Object
+# )
 
 # $markdown += New-MDHeader "Browsers and Drivers" -Level 3
 
