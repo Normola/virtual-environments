@@ -21,4 +21,4 @@ touch $stackToolcachePath/x64.complete
 
 echo "export PATH="\$PATH":$destinationPath" >> "$HOME/.bashrc"
 
-invoke_tests "Common" "Stack"
+#invoke_testsinvoke_tests "Common" "Stack"$

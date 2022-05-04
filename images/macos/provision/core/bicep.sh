@@ -4,4 +4,4 @@ echo Installing bicep cli...
 brew tap azure/bicep
 brew install bicep
 
-invoke_tests "Common" "Bicep"
+#invoke_testsinvoke_tests "Common" "Bicep"$

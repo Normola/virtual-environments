@@ -13,4 +13,4 @@ brew install aws-sam-cli
 echo "Install aws cli session manager"
 brew install --cask session-manager-plugin
 
-invoke_tests "Common" "AWS"
+#invoke_testsinvoke_tests "Common" "AWS"$

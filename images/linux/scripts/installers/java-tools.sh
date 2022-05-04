@@ -151,4 +151,4 @@ ln -s /usr/share/gradle-"${gradleLatestVersion}"/bin/gradle /usr/bin/gradle
 echo "GRADLE_HOME=$(find /usr/share -depth -maxdepth 1 -name "gradle*")" | tee -a /etc/environment
 
 reloadEtcEnvironment
-invoke_tests "Java"
+#invoke_testsinvoke_tests "Java"$

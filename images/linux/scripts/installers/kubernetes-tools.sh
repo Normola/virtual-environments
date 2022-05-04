@@ -29,4 +29,4 @@ download_url="https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master
 curl -s "$download_url" | bash
 mv kustomize /usr/local/bin
 
-invoke_tests "Tools" "Kubernetes tools"
+#invoke_testsinvoke_tests "Tools" "Kubernetes tools"$

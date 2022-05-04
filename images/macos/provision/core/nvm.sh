@@ -26,4 +26,4 @@ fi
 
 echo "Node version manager has been installed successfully"
 
-invoke_tests "Node" "nvm"
+#invoke_testsinvoke_tests "Node" "nvm"$

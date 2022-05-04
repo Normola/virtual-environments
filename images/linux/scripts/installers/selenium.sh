@@ -22,4 +22,4 @@ touch "$SELENIUM_JAR_PATH/$SELENIUM_BINARY_NAME-$SELENIUM_FULL_VERSION"
 # Add SELENIUM_JAR_PATH environment variable
 echo "SELENIUM_JAR_PATH=$SELENIUM_JAR_PATH/$SELENIUM_JAR_NAME" | tee -a /etc/environment
 
-invoke_tests "Tools" "Selenium"
+#invoke_testsinvoke_tests "Tools" "Selenium"$

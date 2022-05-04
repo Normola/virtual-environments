@@ -35,4 +35,4 @@ fi
 # Adding this dir to PATH will make installed pip commands are immediately available.
 prependEtcEnvironmentPath '$HOME/.local/bin'
 
-invoke_tests "Tools" "Python"
+#invoke_testsinvoke_tests "Tools" "Python"$

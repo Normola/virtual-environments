@@ -31,4 +31,4 @@ if is_BigSur; then
 fi
 
 # Invoke tests for all basic tools
-invoke_tests "BasicTools"
+#invoke_testsinvoke_tests "BasicTools"$

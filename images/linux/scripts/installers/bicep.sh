@@ -13,4 +13,4 @@ chmod +x ./bicep.bin
 # Add bicep to PATH (requires admin)
 sudo mv ./bicep.bin /usr/local/bin/bicep
 
-invoke_tests "Tools" "Bicep"
+#invoke_testsinvoke_tests "Tools" "Bicep"$

@@ -9,4 +9,4 @@ unzip -q "/tmp/portable_swiftlint.zip" -d /usr/local/bin
 rm -rf "/usr/local/bin/LICENSE"
 rm -rf "/tmp/portable_swiftlint.zip"
 
-invoke_tests "Linters" "SwiftLint"
+#invoke_testsinvoke_tests "Linters" "SwiftLint"$

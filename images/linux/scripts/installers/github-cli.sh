@@ -13,4 +13,4 @@ downloadUrl=$(get_github_package_download_url "cli/cli" "contains(\"linux\") and
 download_with_retries $downloadUrl "/tmp"
 apt install /tmp/gh_*_linux_amd64.deb
 
-invoke_tests "CLI.Tools" "GitHub CLI"
+#invoke_testsinvoke_tests "CLI.Tools" "GitHub CLI"$

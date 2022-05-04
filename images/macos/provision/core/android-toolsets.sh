@@ -123,4 +123,4 @@ tar xzf proguard5.tgz --strip 1 && rm -f proguard5.tgz
 cp ../proguard4/proguard-*.txt . # Copy the Proguard Android definitions from the previous version
 popd
 
-invoke_tests "Android"
+#invoke_testsinvoke_tests "Android"$

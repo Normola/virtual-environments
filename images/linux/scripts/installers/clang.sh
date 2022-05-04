@@ -35,4 +35,4 @@ done
 InstallClang $default_clang_version
 SetDefaultClang $default_clang_version
 
-invoke_tests "Tools" "clang"
+#invoke_testsinvoke_tests "Tools" "clang"$

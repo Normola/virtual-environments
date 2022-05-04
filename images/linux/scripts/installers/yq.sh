@@ -13,4 +13,4 @@ download_with_retries "$YQ_URL" "/tmp" "${YQ_BINARY}.tar.gz"
 tar xzf "/tmp/${YQ_BINARY}.tar.gz" -C "/tmp"
 mv /tmp/${YQ_BINARY} /usr/bin/yq
 
-invoke_tests "Tools" "yq"
+#invoke_testsinvoke_tests "Tools" "yq"$

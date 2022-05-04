@@ -13,4 +13,4 @@ brew_smart_install "selenium-server"
 CHROMEWEBDRIVER_DIR=$(readlink $(which chromedriver) | xargs dirname)
 echo "export CHROMEWEBDRIVER=$CHROMEWEBDRIVER_DIR" >> "${HOME}/.bashrc"
 
-invoke_tests "Browsers" "Chrome"
+#invoke_testsinvoke_tests "Browsers" "Chrome"$

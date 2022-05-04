@@ -78,4 +78,4 @@ for dotnet_tool in ${DOTNET_TOOLS[@]}; do
     dotnet tool install $dotnet_tool --tool-path '/etc/skel/.dotnet/tools'
 done
 
-invoke_tests "DotnetSDK"
+#invoke_testsinvoke_tests "DotnetSDK"$

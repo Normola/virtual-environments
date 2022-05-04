@@ -48,4 +48,4 @@ fi
 echo 'export PATH="$PATH:$HOME/.dotnet/tools"' >> "$HOME/.bashrc"
 echo "Dotnet operations have been completed successfully..."
 
-invoke_tests "Common" ".NET"
+#invoke_testsinvoke_tests "Common" ".NET"$

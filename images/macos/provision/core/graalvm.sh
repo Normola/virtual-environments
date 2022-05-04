@@ -17,4 +17,4 @@ fi
 # Install Native Image
 $exportPath/gu install native-image
 
-invoke_tests "Common" "GraalVM"
+#invoke_testsinvoke_tests "Common" "GraalVM"$

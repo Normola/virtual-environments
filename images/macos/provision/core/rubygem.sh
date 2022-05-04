@@ -13,4 +13,4 @@ if [ -n "$gemsToInstall" ]; then
     done
 fi
 
-invoke_tests "RubyGem"
+#invoke_testsinvoke_tests "RubyGem"$

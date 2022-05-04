@@ -58,4 +58,4 @@ sudo rm -rf "/Library/Application Support/Microsoft/MAU2.0/"
 sudo rm -rf "/Library/LaunchAgents/com.microsoft.update.agent.plist"
 sudo rm -rf "/Library/PrivelegedHelperTools/com.microsoft.autoupdate.helper"
 
-invoke_tests "Browsers" "Edge"
+#invoke_testsinvoke_tests "Browsers" "Edge"$

@@ -91,4 +91,4 @@ brew_smart_install "maven"
 echo Installing Gradle ...
 brew_smart_install "gradle"
 
-invoke_tests "Java"
+#invoke_testsinvoke_tests "Java"$

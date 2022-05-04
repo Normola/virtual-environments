@@ -16,4 +16,4 @@ $VCPKG_INSTALLATION_ROOT/vcpkg integrate install
 chmod 0777 -R $VCPKG_INSTALLATION_ROOT
 ln -sf $VCPKG_INSTALLATION_ROOT/vcpkg /usr/local/bin
 
-invoke_tests "Tools" "Vcpkg"
+#invoke_testsinvoke_tests "Tools" "Vcpkg"$

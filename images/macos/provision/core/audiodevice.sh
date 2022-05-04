@@ -25,4 +25,4 @@ else
     SwitchAudioSource -s "BlackHole 2ch" -t output
 fi
 
-invoke_tests "System" "Audio Device"
+#invoke_testsinvoke_tests "System" "Audio Device"$

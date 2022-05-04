@@ -24,4 +24,4 @@ chmod +x /usr/local/bin/rebar3
 # Clean up source list
 rm $source_list
 
-invoke_tests "Tools" "erlang"
+#invoke_testsinvoke_tests "Tools" "erlang"$

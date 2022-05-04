@@ -25,4 +25,4 @@ for version in ${versions[*]}; do
     InstallGcc $version
 done
 
-invoke_tests "Tools" "gcc"
+#invoke_testsinvoke_tests "Tools" "gcc"$

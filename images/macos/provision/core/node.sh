@@ -16,4 +16,4 @@ for module in ${npm_global_packages[@]}; do
   npm install -g $module
 done
 
-invoke_tests "Node" "Node.js"
+#invoke_testsinvoke_tests "Node" "Node.js"$
